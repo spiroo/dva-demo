@@ -1,0 +1,125 @@
+@import '../../theme.less';
+
+.header {
+  padding: 0;
+  height: 80px;
+  line-height: 80px;
+
+  .headerContent {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    .logo{
+        float: left;
+        height: 100%;
+        text-align: center;
+        margin-left: 24px;
+
+        .icon {
+          font-size: 45px;
+          color: #fff;
+          vertical-align: middle;
+        }
+
+        span{
+            display: inline-block;
+            width: 0;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        img{
+            vertical-align: middle;
+            max-height: 50px;
+            max-width: 100px;
+        }
+    }
+
+    .name {
+      display: inline-block;
+      float: left;
+      height: 100%;
+      line-height: 24px;
+      margin-left: 15px;
+
+      h1 {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 20px;
+      }
+
+      span {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+
+    .menu {
+      float: left;
+      margin-left: 50px;
+
+      :global(.ant-menu) {
+        height: 76px;
+        line-height: 76px;
+      }
+
+      :global(.ant-menu-dark) {
+        background: @header-bg-color;
+      }
+
+      :global(.ant-menu-horizontal > .ant-menu-item) {
+        margin-top: 0;
+        border-bottom-width: 4px;
+        border-bottom-style: solid;
+        border-bottom-color: @header-bg-color;
+        top: 0;
+      }
+
+      :global(.ant-menu-horizontal > .ant-menu-item:hover) {
+        border-bottom: 4px solid @main-color;
+      }
+
+      :global(.ant-menu-horizontal > .ant-menu-item-selected) {
+        background: @header-bg-color;
+        border-bottom: 4px solid @main-color;
+      }
+    }
+  }
+
+  .userinfo {
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 25px;
+    margin-right: 20px;
+
+    u {
+      cursor: pointer;
+    }
+
+    img {
+      display: inline-block;
+      float: left;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+
+    .username {
+      display: inline-block;
+      float: left;
+      color: rgba(255, 255, 255, 0.67);
+      &:hover {
+        color: #fff;
+      }
+
+      span {
+        margin-right: 5px;
+      }
+    }
+  }
+}

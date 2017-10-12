@@ -1,11 +1,15 @@
 
 module.exports = {
+  name: '迪哇黛眸',
+  englishName: 'Dva Demo',
+  footerText: 'Copyright © 2017 All Rights Reserved.',
+  logo: '/logo.png',
   // 接口地址
   api: {
-    serviceUrl: 'http://jsonplaceholder.typicode.com/',
+    service: 'http://jsonplaceholder.typicode.com/',
   },
 
-// 列表配置
+  // 列表配置
   table: {
     page: 1,
     pageSize: 10,
