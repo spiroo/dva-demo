@@ -6,7 +6,7 @@ module.exports = {
   logo: '/logo.png',
   // 接口地址
   api: {
-    service: 'http://jsonplaceholder.typicode.com/',
+    service: 'http://jsonplaceholder.typicode.com/users',
   },
 
   // 列表配置

@@ -1,12 +1,25 @@
 
+import { table } from '../utils/config';
+
 export default {
 
   namespace: 'users',
 
-  state: {},
+  state: {
+    modalVisible: false,
+    ...table,
+  },
 
   subscriptions: {
     setup({ dispatch, history }) {  // eslint-disable-line
+      history.listen((location) => {
+        const pathname = location.pathname;
+        if (pathname === '/users') {
+          dispatch({
+            // type: 'getWebsite',
+          });
+        }
+      });
     },
   },
 
