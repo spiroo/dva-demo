@@ -1,10 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "start": "roadhog server",
+    "start": "set PORT=9000&&roadhog server",
     "build": "roadhog build",
     "lint": "eslint --ext .js src test",
-    "precommit": "npm run lint",
     "test": "mocha",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --recursive"
   },
@@ -25,7 +24,8 @@
     "react": "^15.4.0",
     "react-big-calendar": "^0.16.1",
     "react-dom": "^15.4.0",
-    "reactcss": "^1.2.3"
+    "reactcss": "^1.2.3",
+    "screenfull": "^3.3.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",

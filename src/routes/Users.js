@@ -1,8 +1,16 @@
 import React from 'react';
 import { connect } from 'dva';
-import { Layout, Menu } from 'antd';
+import screenfull from 'screenfull';
+import { Layout, Menu, Button } from 'antd';
 
 const { Content, Sider } = Layout;
+
+const screenfullHandler = (event) => {
+  if (screenfull.enabled) {
+    // screenfull.toggle(event.target);
+    screenfull.toggle();
+  }
+};
 
 function Users() {
   return (
@@ -21,7 +29,7 @@ function Users() {
         </Menu>
       </Sider>
       <Content style={{ padding: '0 24px', minHeight: 380, backgroundColor: '#fff' }}>
-        Content
+        <Button type="primary" onClick={screenfullHandler}>Screenfull</Button>
       </Content>
     </Layout>
 
